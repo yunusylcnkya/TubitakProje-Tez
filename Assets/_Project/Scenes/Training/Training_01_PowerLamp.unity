@@ -2433,6 +2433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217186192}
   - component: {fileID: 1217186193}
+  - component: {fileID: 1217186194}
   m_Layer: 0
   m_Name: Thesis_DC_Simulation
   m_TagString: Untagged
@@ -2482,6 +2483,45 @@ MonoBehaviour:
     input: {fileID: 871172247}
     output: {fileID: 871172246}
   logResults: 1
+--- !u!114 &1217186194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217186191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d627180a7dac53449b0cd08cfb92cd48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DcSupplyValidationRecorder
+  nominalVoltageVolts: 24
+  currentLimitAmperes: 5
+  samples:
+  - experimentId: D01
+    openCircuit: 1
+    loadResistanceOhms: 0.001
+    measurementCompleted: 0
+    measuredVoltageVolts: 0
+    measuredCurrentAmperes: 0
+  - experimentId: D02
+    openCircuit: 0
+    loadResistanceOhms: 1200
+    measurementCompleted: 0
+    measuredVoltageVolts: 0
+    measuredCurrentAmperes: 0
+  - experimentId: D03
+    openCircuit: 0
+    loadResistanceOhms: 470
+    measurementCompleted: 0
+    measuredVoltageVolts: 0
+    measuredCurrentAmperes: 0
+  - experimentId: D04
+    openCircuit: 0
+    loadResistanceOhms: 240
+    measurementCompleted: 0
+    measuredVoltageVolts: 0
+    measuredCurrentAmperes: 0
 --- !u!4 &1250710736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9024713615934563043, guid: b519c7d2599c35b4cad18291f9e94eb7, type: 3}
