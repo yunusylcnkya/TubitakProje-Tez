@@ -1,0 +1,14 @@
+
+{
+  "name": "Thesis.Physics.Tests",
+  "references": [
+    "Thesis.Physics"
+  ],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll"],
+  "autoReferenced": false,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "noEngineReferences": true
+}
