@@ -1,0 +1,21 @@
+﻿TestID,Temrin,TestTuru,GirdiIslem,OnerilenBeklenenSonuc,Tur,ReferansDurumu
+T01-NOM,01,nominal,24V lamba doğru bağlanmış ve besleme aktif,Lamba açık,normal,Taslak
+T01-OPEN,01,open_circuit,Lamba besleme yolunda kablo eksik,"Lamba kapalı, eksik bağlantı",yanlış,Taslak
+T02-START,02,input_sequence,START basılı,Kontaktör enerjilenir,normal,Taslak
+T02-RELEASE,02,input_sequence,"START serbest bırakılmış, mühürleme yok",Kontaktör bırakır,normal,Taslak
+T03-SEAL,03,input_sequence,START bas ve bırak,Kontaktör enerjili kalır,normal,Taslak
+T03-STOP,03,input_sequence,Mühürleme aktifken STOP bas,Kontaktör bırakır,normal,Taslak
+T03-BYPASS,03,fault_injection,STOP kontağı devre dışı bırakılmış,STOP ile durmama hatası; güvensiz,güvensiz,Uzman doğrulaması gerekli
+T03-ALT,03,equivalence_candidate,Klemens üzerinden alternatif kablolama,Aynı davranış ve tüm güvenlik koşulları sağlanmalı,eşdeğer_adayı,Uzman doğrulaması gerekli
+T04-MOTOR,04,input_sequence,"Üç faz tam, kontrol devresi aktif",Motor ileri yönde çalışır,normal,Taslak
+T04-PHASE,04,fault_injection,Tek faz beslemesi eksik,Motor çalışmamalı; faz kaybı tespiti,yanlış,Uzman doğrulaması gerekli
+T04-THERM,04,fault_injection,Termik TEST komutu,"Kontaktor bırakır, motor durur",koruma,Taslak
+T04-REVERSE,04,fault_injection,İki fazın yer değiştirmesi,Yön ters veya tanımlı hata/uyarı,yanlış,Uzman doğrulaması gerekli
+T05-RELAY,05,input_sequence,Röle NO/NC durum değişimi,Lamba ilgili kontak durumunu takip eder,normal,Taslak
+T06-SEAL,06,input_sequence,Röle ile mühürleme uygula,Röle besleme geri bildirimini korur,normal,Uzman doğrulaması gerekli
+T07-TON,07,timing,TON 3s ve lamba devresi,Gecikme sonunda lamba açılır,normal,Taslak
+T07-RESET,07,timing,TON dolmadan beslemeyi kes,Röle sıfırlanır; lamba açılmamalı,normal,Taslak
+T08-MOTOR,08,timing,TON 3s gecikmeli motor,K1 ve motor gecikmeden sonra aktif,normal,Taslak
+T08-STOP,08,input_sequence,Gecikme sonrası STOP bas,Motor durmalı,normal,Taslak
+T08-THERM,08,fault_injection,Termik TEST aktif,Motor kapanmalı,koruma,Taslak
+T08-POWER,08,input_sequence,Şebeke kes sonra geri ver,Güvenli yeniden başlatma koşulu kontrol edilmeli,güvenlik_adayı,Uzman doğrulaması gerekli
