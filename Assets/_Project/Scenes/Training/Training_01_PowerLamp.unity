@@ -1790,6 +1790,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3120611771956785931, guid: 6cbef6f3ee0f1174c95125d26f3ec6ac, type: 3}
   m_PrefabInstance: {fileID: 871172244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &871172246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2784280531576169870, guid: 6cbef6f3ee0f1174c95125d26f3ec6ac, type: 3}
+  m_PrefabInstance: {fileID: 871172244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da99ea4e65dda764b83abab93682a141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Terminal
+--- !u!114 &871172247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5747796902983856891, guid: 6cbef6f3ee0f1174c95125d26f3ec6ac, type: 3}
+  m_PrefabInstance: {fileID: 871172244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da99ea4e65dda764b83abab93682a141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Terminal
 --- !u!114 &871172250 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4939411448664720917, guid: 6cbef6f3ee0f1174c95125d26f3ec6ac, type: 3}
@@ -2401,6 +2423,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3913fe7b8e7178344a9b62369abc59fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DCPowerSource
+--- !u!1 &1217186191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217186192}
+  - component: {fileID: 1217186193}
+  m_Layer: 0
+  m_Name: Thesis_DC_Simulation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217186192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217186191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217186193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217186191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b798b24194989a4480e1420849fd6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DcNetworkPreviewBridge
+  connectionManager: {fileID: 888505117}
+  legacySimulation: {fileID: 1268906073}
+  dcSource: {fileID: 1187056749}
+  nominalVoltage: 24
+  currentLimit: 5
+  loads:
+  - id: LAMP1
+    terminalA: {fileID: 1998796212}
+    terminalB: {fileID: 1998796211}
+    resistanceOhms: 1200
+  fuseLinks:
+  - fuse: {fileID: 871172250}
+    input: {fileID: 871172247}
+    output: {fileID: 871172246}
+  logResults: 1
 --- !u!4 &1250710736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9024713615934563043, guid: b519c7d2599c35b4cad18291f9e94eb7, type: 3}
@@ -3874,6 +3955,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3324c9ec1e7b5a74881c671a0ea77ca6, type: 3}
+--- !u!114 &1998796211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4346724625302508529, guid: 3324c9ec1e7b5a74881c671a0ea77ca6, type: 3}
+  m_PrefabInstance: {fileID: 1998796210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da99ea4e65dda764b83abab93682a141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Terminal
+--- !u!114 &1998796212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1069623695617715853, guid: 3324c9ec1e7b5a74881c671a0ea77ca6, type: 3}
+  m_PrefabInstance: {fileID: 1998796210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da99ea4e65dda764b83abab93682a141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Terminal
 --- !u!4 &2025946912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1902430991325659841, guid: 69771e9bd1302db4b8368fbade40e419, type: 3}
@@ -4285,3 +4388,4 @@ SceneRoots:
   - {fileID: 673530306}
   - {fileID: 281874518}
   - {fileID: 1294272382}
+  - {fileID: 1217186192}
